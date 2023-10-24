@@ -9,7 +9,7 @@ app.use(express.json());
 const contatoRouter = require('./routes/contatoRoutes');
 app.use('/contatos', contatoRouter);
 
-app.use((req,res,next){
+app.use((req,res,next) => {
   res.status(404).json({"message": "Rota não definida"})
 
 })

@@ -9,10 +9,9 @@ app.use(express.json());
 const contatoRouter = require('./routes/contatoRoutes');
 app.use('/contatos', contatoRouter);
 
-app.use((req,res,next) => {
-  res.status(404).json({"message": "Rota não definida"})
-
-})
+app.use((req, res, next) => {
+  res.status(404).json({ message: 'Rota não encontrada' });
+});
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -29,3 +28,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+
+module.exports =app ;

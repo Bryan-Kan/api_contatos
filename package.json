@@ -2,7 +2,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "jest --forceExit",
-    "test:performance": "artillery run --output report.json artillery-config.yml
+    "test:performance": "artillery run --output report.json artillery-config.yml"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
